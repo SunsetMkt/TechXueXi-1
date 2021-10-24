@@ -22,14 +22,14 @@ jobs:
   Release:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       packages: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-        #with:
-          #ref: master
+        with:
+          ref: master
 
       - name: Get tag
         id: tag
